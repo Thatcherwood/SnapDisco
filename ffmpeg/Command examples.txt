@@ -1,0 +1,16 @@
+To force the frame rate of the output file to 24 fps:
+ffmpeg -i input.avi -r 24 output.avi
+
+You can save the global metadata to a text file using the -f ffmetadata option as follows:
+
+ffmpeg -i in.mp4 -f ffmetadata in.txt
+If you also need metadata from the video and audio streams (for example if the global metadata does not contain the creation time) use:
+
+ffmpeg -i in.mp4 -c copy -map_metadata 0 -map_metadata:s:v 0:s:v -map_metadata:s:a 0:s:a -f ffmetadata in.txt
+
+https://shotstack.io/learn/use-ffmpeg-to-trim-video/
+
+https://web.archive.org/web/20210621172103/https://trac.ffmpeg.org/wiki/Create%20a%20thumbnail%20image%20every%20X%20seconds%20of%20the%20video
+
+https://stackoverflow.com/questions/40088222/ffmpeg-convert-video-to-images#:~:text=Examples%201%20Extract%20one%20picture%20each%2050%20frames:,ffmpeg%20-i%20in.avi%20-vf%20thumbnail,scale=300:200%20-frames:v%201%20out.png
+
