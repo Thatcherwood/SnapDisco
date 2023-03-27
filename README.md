@@ -7,13 +7,13 @@ This website will receive user-made videos, and process them into a smaller file
 
 ## Dependencies
 
-[NPM](https://www.npmjs.com) -- Package manager for the web.
-[MLT-XML](https://www.npmjs.com/package/mlt-xml) -- Converts Javascript objects to XML formatted for MLT.
-[MLT](https://www.mltframework.org) -- Media editing toolkit. Runs on the server to edit video files
-[Prisma](https://www.prisma.io) -- Object Relational Manager. Maps Javascript objects to server database
-[PostgreSQL](https://www.postgresql.org) -- Relational Database for holding user data (Such as XML data for MLT to process)
-[Cypress](https://www.cypress.io) -- Automated frontend testing
-[Sveltekit](https://kit.svelte.dev) -- Frontend development
+[NPM](https://www.npmjs.com) -- Package manager for the web.  
+[MLT-XML](https://www.npmjs.com/package/mlt-xml) -- Converts Javascript objects to XML formatted for MLT  
+[MLT](https://www.mltframework.org) -- Media editing toolkit. Runs on the server to edit video files  
+[Prisma](https://www.prisma.io) -- Object Relational Manager. Maps Javascript objects to server database  
+[PostgreSQL](https://www.postgresql.org) -- Relational Database for holding user data (Such as XML data for MLT to process)  
+[Cypress](https://www.cypress.io) -- Automated frontend testing  
+[Sveltekit](https://kit.svelte.dev) -- Frontend development  
 
 
 ## Installation
