@@ -12,6 +12,17 @@ datasource db {
 }
 
 model User {
-  id Int @id @default(autoincrement())
-  name String
+  id String @id @default(uuid())
+  name String?
+  email String
+  uploadedVideos String[]
 }
+
+model Video {
+  id String @id @default(uuid())
+  uploadedAt DateTime
+  metadata String?
+  author User
+}
+
+//This schema file is not done yet and needs to be edited iteravily.
