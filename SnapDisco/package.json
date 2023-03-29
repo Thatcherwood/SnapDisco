@@ -28,6 +28,7 @@
 		"vite": "^4.0.0",
 		"vitest": "^0.25.3"
 	},
+	"type": "module",
 	"dependencies": {
 		"cypress": "^12.8.1",
 		"mlt-xml": "^2.0.2"
