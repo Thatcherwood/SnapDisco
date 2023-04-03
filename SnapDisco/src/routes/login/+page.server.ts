@@ -8,8 +8,8 @@ export const actions = {
   default: async ({ request }) => {
     const data = await request.formData();
 
-    let name = data.get("name")
-    let userEmail = data.get("userEmail")
+    let name = data.get("name")?.toString()
+    let userEmail = data.get("userEmail")?.toString()
 
     if (!name || !userEmail) {
       return fail(400, { name, userEmail, missing: true });
@@ -26,6 +26,6 @@ export const actions = {
       },
     });
 
-    throw redirect(303, `/drafts`)
+    throw redirect(303, `/`)
   }
 };
