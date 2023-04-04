@@ -15,6 +15,7 @@ model User {
   id             String   @id @default(uuid())
   name           String?
   email          String
+  password       String
   uploadedVideos String[]
   Video          Video[]
 }
@@ -27,4 +28,3 @@ model Video {
   author     User     @relation(fields: [userId], references: [id]) // one user to many videos relation for the database
   userId     String
 }
-
