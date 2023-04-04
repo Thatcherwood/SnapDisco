@@ -22,9 +22,9 @@ createServer((req, res) => {
                 // so you call the promise, it assembles all the pieces together and cleans the temporary files
                 assembleChunks()
                 // when it's done, it returns an object with the path to the file and additional post parameters if any
-                .then(data => console.log(data)) // { filePath: 'tmp/1528932277257', postParams: { email: 'upload@corp.com', name: 'Mr Smith' } }
+                .then((/** @type {any} */ data) => console.log(data)) // { filePath: 'tmp/1528932277257', postParams: { email: 'upload@corp.com', name: 'Mr Smith' } }
                 // errors if any are triggered by the file system (disk is full…)
-                .catch(err => console.log(err));
+                .catch((/** @type {any} */ err) => console.log(err));
             }
         })
         .catch((err) => {
