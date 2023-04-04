@@ -1,11 +1,12 @@
-const http = require('http');
-const uploader = require('huge-uploader-nodejs');
+import { createServer } from 'http';
+import uploader from 'huge-uploader-nodejs';
  
 // you must specify a temp upload dir and a max filesize for the chunks
 const tmpDir = './tmp';
 const maxFileSize = 10;
+const maxChunkSize = 1024;
  
-http.createServer((req, res) => {
+createServer((req, res) => {
     if (req.url === '/upload' && req.method === 'POST') {
         // we feed the function with node's request object (here req),
         // the temp directory path and the max size for the chunks
