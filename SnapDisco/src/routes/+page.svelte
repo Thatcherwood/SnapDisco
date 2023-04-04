@@ -2,3 +2,4 @@
 <p>Visit <a href="/about">About</a> to read about the web app!</p>
 <p>Or <a href="/login">login</a></p>
 
+<p><a href="/upload">upload</a></p>
