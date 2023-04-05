@@ -14,8 +14,8 @@ This website will receive user-made videos, and process them into a smaller file
 [PostgreSQL](https://www.postgresql.org) -- Relational Database for holding user data (Such as XML data for MLT to process)  
 [Cypress](https://www.cypress.io) -- Automated frontend testing  
 [Sveltekit](https://kit.svelte.dev) -- Frontend development  
-[jwt-simple](https://www.npmjs.com/package/jwt-simple) -- login/password duties
-[huge-uploader](https://www.npmjs.com/package/huge-uploader-nodejs?activeTab=readme) -- Allow uploading large files in chunk -- usefull for flakey mobile connections
+[jwt-simple](https://www.npmjs.com/package/jwt-simple) -- login/password duties  
+[huge-uploader](https://www.npmjs.com/package/huge-uploader-nodejs?activeTab=readme) -- Allow uploading large files in chunk -- usefull for flakey mobile connections  
 
 
 ## Installation
