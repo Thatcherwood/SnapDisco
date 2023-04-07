@@ -1,36 +1,45 @@
 <script lang="ts">
-import { browser } from '$app/environment';
+	import { browser } from '$app/environment';
 
-import HugeUploader from 'huge-uploader';
+	import HugeUploader from 'huge-uploader';
 
-if (browser)   { // code will only run on the browser
+    let videoFile; //TODO make this type a video. idk how to do that tho
 
-    let fileObject = document.getElementById("input");
+	if (browser) {
+		// code will only run on the browser
 
-    const uploader = new HugeUploader({ endpoint: 'localhost/upload/', file: fileObject })  //TODO add unique file ID header for multi user stuff
+		let fileObject = document.getElementById('input');
 
-    // subscribe to events
-    uploader.on('error', (err) => {
-        console.error('Something bad happened', err.detail);
-    });
+		const uploader = new HugeUploader({ endpoint: 'localhost/upload/', file: fileObject }); //TODO add unique file ID header for multi user stuff
 
-    uploader.on('progress', (progress) => {
-        console.log(`The upload is at ${progress.detail}%`);
-    });
+		// subscribe to events
+		uploader.on('error', (err) => {
+			console.error('Something bad happened', err.detail);
+		});
 
-    uploader.on('finish', (body) => {
-        console.log('yeahhh - last response body:', body.detail);
-    });
+		uploader.on('progress', (progress) => {
+			console.log(`The upload is at ${progress.detail}%`);
+		});
 
-    // if you want to pause/resume the upload
-    uploader.togglePause();
-}
+		uploader.on('finish', (body) => {
+			console.log('yeahhh - last response body:', body.detail);
+		});
+
+		// if you want to pause/resume the upload
+		uploader.togglePause();
+	}
 </script>
 
 <h1>upload here!</h1>
 
 <p>Upload video</p>
-<input type="file" id="input" accept="video/*" />
+
+<form method="POST">
+	<label>
+		Video
+		<input type="file" bind:files={videoFile} />
+	</label>
+</form>
 
 <style>
 	input {
