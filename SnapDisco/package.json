@@ -33,6 +33,7 @@
 		"@prisma/client": "^4.11.0",
 		"cypress": "^12.8.1",
 		"event-target-shim": "^6.0.2",
+		"express": "^4.18.2",
 		"huge-uploader": "^1.0.6",
 		"huge-uploader-nodejs": "^1.2.1",
 		"jwt-simple": "^0.5.6",
