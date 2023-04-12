@@ -37,7 +37,8 @@
 		"huge-uploader": "^1.0.6",
 		"huge-uploader-nodejs": "^1.2.1",
 		"jwt-simple": "^0.5.6",
-		"mlt-xml": "^2.0.2"
+		"mlt-xml": "^2.0.2",
+		"uuid": "^9.0.0"
 	},
 	"prisma": {
 		"seed": "ts-node/seed.ts"
