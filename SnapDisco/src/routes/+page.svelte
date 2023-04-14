@@ -3,3 +3,4 @@
 <p><a href="/login">login</a></p>
 
 <p><a href="/upload">upload</a></p>
+<p><a href="/signup">signup</a></p>

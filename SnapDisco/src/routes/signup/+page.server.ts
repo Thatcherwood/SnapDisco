@@ -1,16 +1,15 @@
 import { PrismaClient } from '@prisma/client'
-import express from 'express'
 import {v4 as uuidv4 } from 'uuid'
+import newUsername from './+page.svelte'
 
 const prisma = new PrismaClient()
 
-let app = express()
 
 async function main() {
   const user = await prisma.user.create({
     data: {
-      id: newUserID,
-      name: newUserName,
+      id: uuidv4(),
+      name: '',//newUsername,
       email: '',
       password: ''
     },
@@ -27,26 +26,4 @@ main()
     await prisma.$disconnect()
     process.exit(1)
   })
-//The below is another method using express api to create a new user. dunno if this is correct
-  let newUserID = uuidv4();
-  let newUserName = '' //TODO get user input on their custom username
-
-  app.post('/signup', async (req, res) => {
-    const {signupusername} = req.body
-    const result = prisma.user.create({
-      data: {
-        id: newUserID,
-        name: newUserName,
-        email: '', // TODO get user input on their email
-        password: ''//TODO get user input on password
-
-      },
-      res.json(result)
-
-
-
-    })
-
-
-  }
   
