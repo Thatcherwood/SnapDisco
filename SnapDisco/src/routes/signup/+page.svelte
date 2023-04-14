@@ -1,16 +1,39 @@
 <script lang="ts">
+	export let newUsername = '';
 
-    let newUsername = 'Username';
-    export { newUsername }
+	export let newUserEmail = '';
 
-    let newUserEmail = 'Email';
-    export {newUserEmail}
+	export let password = '';
+
+    let verifyPassword1 = document.getElementsByName("password")
+    let verifyPassword2 = document.getElementsByName("password-verify")
+    let passwordMatch = false
+
+    if (verifyPassword1 === verifyPassword2) {
+        passwordMatch = true; //TODO read this value on submit!
+    }
+
 </script>
 
-<input bind:value={newUsername}>
-<h1>Your Username is {newUsername}.</h1>
+<h1>New Account</h1>
 
-<input bind:value={newUserEmail}>
-<h2>Your Email is {newUserEmail}</h2>
+<form method="POST">
+	<label>
+		<p>Enter Username:</p>
+		<input name="username" bind:value={newUsername} placeholder="username" />
 
-    <p>hello</p>
+		<p>Enter Email:</p>
+		<input name="email" bind:value={newUserEmail} placeholder="email" type="email" required />
+
+		<p>Enter Password:</p>
+		<input name="password" bind:value={password} placeholder="password" type="password" required />
+
+        <p>Re-Enter Password:</p>
+		<input name="password-verify" bind:value={password} placeholder="password" type="password" required />
+
+
+		<br />
+		<br />
+		<input type="submit" value="submit" />
+	</label>
+</form>
