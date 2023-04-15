@@ -8,7 +8,9 @@ export const actions = {
 		const data = await request.formData();
 		const username = data.get('username');
 		const email = data.get('email');
-		const password = data.get('password');
+		const password = data.get('hashedPassword');
+
+		
 
 		const prisma = new PrismaClient();
 		if (username != '') {

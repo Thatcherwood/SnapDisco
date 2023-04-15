@@ -1,3 +1,4 @@
+
 export function passwordMatchWarning(passwordString1: string, passwordString2: string) {
 	const passwordElement = document.getElementById('match-password');
   const submitButton = document.getElementById('submission-button')
@@ -10,3 +11,10 @@ export function passwordMatchWarning(passwordString1: string, passwordString2: s
 	}
 }
 
+const bcrypt = require('bcrypt')
+export function hashPass(password: string) {
+
+  const salt = bcrypt.genSalt(10);
+  const hash = bcrypt.hash(password, salt);
+  return hash;
+}

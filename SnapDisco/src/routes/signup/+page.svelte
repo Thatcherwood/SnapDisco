@@ -1,13 +1,19 @@
 <script lang="ts">
-	import { passwordMatchWarning, } from './signup';
+	import { passwordMatchWarning, hashPass } from './signup';
+	//import {bcrypt} from "bcrypt"
+	import "bcrypt"
+	
 
 	export let newUsername = '';
 
 	export let newUserEmail = '';
 
-	export let password = '';
+	let password = '';
 
 	let verifyPassword = '';
+
+	const salt = bcrypt.genSalt(10);
+	export const hashedPassword = bcrypt.hash(password, salt);
 
 </script>
 
