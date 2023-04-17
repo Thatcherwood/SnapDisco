@@ -31,9 +31,8 @@
 	"type": "module",
 	"dependencies": {
 		"@prisma/client": "^4.11.0",
-		"@types/bcrypt": "^5.0.0",
 		"@types/jwt-simple": "^0.5.33",
-		"bcrypt": "^5.1.0",
+		"bcrypt-ts": "^3.0.0",
 		"cypress": "^12.8.1",
 		"event-target-shim": "^6.0.2",
 		"jwt-simple": "^0.5.6",

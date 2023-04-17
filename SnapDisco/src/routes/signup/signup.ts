@@ -1,3 +1,4 @@
+import { genSaltSync, hashSync } from 'bcrypt-ts';
 
 export function passwordMatchWarning(passwordString1: string, passwordString2: string) {
 	const passwordElement = document.getElementById('match-password');
@@ -11,10 +12,13 @@ export function passwordMatchWarning(passwordString1: string, passwordString2: s
 	}
 }
 
-const bcrypt = require('bcrypt')
-export function hashPass(password: string) {
-
-  const salt = bcrypt.genSalt(10);
-  const hash = bcrypt.hash(password, salt);
+export async function hashPass(password: string) { //TODO make async
+try {
+  const salt = await genSaltSync(10);
+  const hash = hashSync(password, salt);
   return hash;
+}
+catch (err) {
+  console.log(err + "salt hash error")
+}
 }
