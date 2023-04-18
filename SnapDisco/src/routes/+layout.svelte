@@ -2,7 +2,7 @@
 	<div style="text-align:center">
 	<a class="btn" href="/">Home</a>
 	<a class="btn" href="/login">Login</a>
-	<a class="btn" href="/settings">Settings</a>
+	<a class="btn" href="/account">Account</a>
 	<a class="btn" href="/signup">Signup</a>
 	</div>
 </nav>
