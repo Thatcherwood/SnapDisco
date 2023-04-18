@@ -1,12 +1,19 @@
+<script>
+
+	import { enhance } from "$app/forms";
+
+</script>
 <body>
-	<form method="POST">
+	<form method="POST" use:enhance>
 		<label>
 			Email
-			<input name="email" type="email" />
+			<input name="email" type="email" placeholder="email" required/>
 		</label>
+		<br />
+		<br />
 		<label>
 			Password
-			<input name="password" type="password" />
+			<input name="password" type="password" placeholder="password" required />
 		</label>
 		<button>Log in</button>
 	</form>
@@ -15,6 +22,11 @@
 <style>
 	body {
 		background-color: rgba(247, 247, 14, 0.212);
+	}
+
+	form {
+		text-align: center;
+		font-size: 2vw;
 	}
 
 	button {

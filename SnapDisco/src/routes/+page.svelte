@@ -12,6 +12,8 @@
 	<br />
 	<div style="text-align:center">
 		<a class="bigUploadBtn" href="/upload">Upload Your Video</a>
+		<br />
+		<img src="/favicon.png" alt="SnapDisco logo" style="border: solid; width: 20vw; height:20vw;">
 	</div>
 </body>
 

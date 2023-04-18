@@ -15,11 +15,17 @@
 	<h1>New Account</h1>
 	<form method="POST" use:enhance>
 		<label>
-			<p>Enter Username:</p>
+			Enter Username:
 			<input name="username" bind:value={newUsername} placeholder="username" />
-			<p>Enter Email:</p>
+			</label>
+			<br />
+			<label>
+			Enter Email:
 			<input name="email" bind:value={newUserEmail} placeholder="email" type="email" required />
-			<p>Enter Password:</p>
+			</label>
+			<br />
+			<label>
+			Enter Password:
 			<input
 				name="password"
 				bind:value={password}
@@ -28,7 +34,10 @@
 				required
 				on:change={() => passwordMatchWarning(password, verifyPassword)}
 			/>
-			<p>Re-Enter Password:</p>
+			</label>
+			<br />
+			<label>
+			Re-Enter Password:
 			<input
 				name="password-verify"
 				bind:value={verifyPassword}
@@ -37,10 +46,10 @@
 				required
 				on:change={() => passwordMatchWarning(password, verifyPassword)}
 			/>
+			</label>
 			<p id="match-password">The Passwords must match!</p>
 
 			<input id="submission-button" type="submit" value="submit" />
-		</label>
 	</form>
 </body>
 
