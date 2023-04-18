@@ -12,12 +12,11 @@
 
 	
 
-
 </script>
 
 <h1>New Account</h1>
 
-<form method="POST" use:enhance|preventDefault={handleSubmit}>
+<form method="POST" use:enhance>
 	<label>
 		<p>Enter Username:</p>
 		<input
