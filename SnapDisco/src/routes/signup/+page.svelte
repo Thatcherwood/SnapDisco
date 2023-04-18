@@ -1,21 +1,23 @@
 <script lang="ts">
-	import { passwordMatchWarning, hashPass } from './signup';
+	import { passwordMatchWarning } from './signup';
+	import { enhance } from '$app/forms'
 
 	export let newUsername = '';
 
 	export let newUserEmail = '';
 
-	let password = '';
+	export let password = '';
 
 	let verifyPassword = '';
 
-	export const hashedPassword = hashPass(password);
+	
+
 
 </script>
 
 <h1>New Account</h1>
 
-<form method="POST">
+<form method="POST" use:enhance|preventDefault={handleSubmit}>
 	<label>
 		<p>Enter Username:</p>
 		<input
@@ -38,7 +40,7 @@
 			placeholder="password"
 			type="password"
 			required
-			on:change={() => passwordMatchWarning(password, verifyPassword)}
+			on:change={() => passwordMatchWarning(password, verifyPassword) }
 		/>
 		<p>Re-Enter Password:</p>
 		<input
