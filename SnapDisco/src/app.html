@@ -6,8 +6,32 @@
 		<meta name="viewport" content="width=device-width" />
 		%sveltekit.head%
 	</head>
-	<body style="background-color: rgba(247, 247, 14, 0.212);" data-sveltekit-preload-data="hover">
+	<body style="background-color: rgba(247, 247, 14, 0.212)" data-sveltekit-preload-data="hover">
 		<div style="display: contents">%sveltekit.body%</div>
 	</body>
 </html>
 
+<style>
+	:global(body) {
+		background-color: rgba(253, 253, 203);
+	}
+
+	h1 {
+		color: rgb(0, 21, 80);
+		text-align: center;
+	}
+
+	p {
+		color: rgb(0, 21, 80);
+		text-align: center;
+	}
+
+	#btn {
+		color: rgb(0, 21, 80);
+		background-color: aliceblue;
+		width: 10%;
+		height: 5vw;
+		font-size: 2vw;
+		border: dashed;
+	}
+</style>

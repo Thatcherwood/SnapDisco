@@ -49,25 +49,11 @@
 			</label>
 			<p id="match-password">The Passwords must match!</p>
 
-			<input id="submission-button" type="submit" value="submit" />
+			<input id="btn" type="submit" value="submit" />
 	</form>
 </body>
 
 <style>
-	body {
-		background-color: rgba(247, 247, 14, 0.212);
-	}
-
-	h1 {
-		color: rgb(0, 21, 80);
-		text-align: center;
-		font-size: 3vw;
-	}
-
-	p {
-		color: rgb(0, 21, 80);
-		font-size: 2vw;
-	}
 
 	form {
 		text-align: center;
@@ -80,12 +66,5 @@
 		font-size: 1.5vw;
 	}
 
-	#submission-button {
-		color: rgb(0, 21, 80);
-		background-color: aliceblue;
-		width: 10%;
-		height: 5vw;
-		font-size: 2vw;
-		border: dashed;
-	}
+
 </style>

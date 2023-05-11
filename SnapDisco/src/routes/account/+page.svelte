@@ -29,20 +29,6 @@
 </body>
 
 <style>
-	body {
-		background-color: rgba(247, 247, 14, 0.212);
-	}
-
-	h1 {
-		color: rgb(0, 21, 80);
-		text-align: center;
-	}
-
-	p {
-		color: rgb(0, 21, 80);
-		text-align: center;
-	}
-
 	.tablelocation {
 		text-align: center;
 	}

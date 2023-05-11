@@ -26,10 +26,6 @@
     display: inline-block;
   }
 
-  a + a {
-    margin-left: 1rem;
-  }
-
   .active{
     font-weight: bold;
   }
