@@ -1,6 +1,7 @@
 <script lang="ts">
-	import { passwordMatchWarning } from './signup';
+	import { passwordVerification } from './signup';
 	import { enhance } from '$app/forms';
+	import PasswordNotification from '$lib/components/+PasswordNotification.svelte';
 
 	export let newUsername = '';
 
@@ -17,14 +18,14 @@
 		<label>
 			Enter Username:
 			<input name="username" bind:value={newUsername} placeholder="username" />
-			</label>
-			<br />
-			<label>
+		</label>
+		<br />
+		<label>
 			Enter Email:
 			<input name="email" bind:value={newUserEmail} placeholder="email" type="email" required />
-			</label>
-			<br />
-			<label>
+		</label>
+		<br />
+		<label>
 			Enter Password:
 			<input
 				name="password"
@@ -32,11 +33,11 @@
 				placeholder="password"
 				type="password"
 				required
-				on:change={() => passwordMatchWarning(password, verifyPassword)}
+				on:change={() => passwordVerification(password, verifyPassword)}
 			/>
-			</label>
-			<br />
-			<label>
+		</label>
+		<br />
+		<label>
 			Re-Enter Password:
 			<input
 				name="password-verify"
@@ -44,26 +45,20 @@
 				placeholder="password"
 				type="password"
 				required
-				on:change={() => passwordMatchWarning(password, verifyPassword)}
+				on:change={() => passwordVerification(password, verifyPassword)}
 			/>
-			</label>
-			<p id="match-password">The Passwords must match!</p>
+		</label>
 
-			<input id="btn" type="submit" value="submit" />
+		<PasswordNotification></PasswordNotification>
+
+		<input id="btn" type="submit" value="submit" disabled />
 	</form>
 </body>
 
 <style>
-
 	form {
 		text-align: center;
 		font-size: 2vw;
-	}
-
-	#match-password {
-		visibility: visible;
-		color: red;
-		font-size: 1.5vw;
 	}
 
 

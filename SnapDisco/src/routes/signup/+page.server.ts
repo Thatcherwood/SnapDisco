@@ -1,6 +1,7 @@
 import { PrismaClient } from '@prisma/client';
 import { v4 as uuidv4 } from 'uuid';
 import { hashPassword, } from './signup';
+import { error } from 'console';
 /** @type {import('./%types').Actions} */
 
 export const actions = {
@@ -38,5 +39,6 @@ export const actions = {
 					});
 			}
 		}
+		else {error("null signup form")}//TODO inform user of error
 	}
 };
