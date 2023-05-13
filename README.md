@@ -15,11 +15,12 @@ This website will receive user-made videos, and process them into a smaller file
 [Cypress](https://www.cypress.io) -- Automated frontend testing  
 [Sveltekit](https://kit.svelte.dev) -- Frontend development  
 [jwt-simple](https://www.npmjs.com/package/jwt-simple) -- login/password duties  
-[huge-uploader](https://www.npmjs.com/package/huge-uploader-nodejs?activeTab=readme) -- Allow uploading large files in chunk -- usefull for flakey mobile connections may be added if time permits 
+[huge-uploader](https://www.npmjs.com/package/huge-uploader-nodejs?activeTab=readme) -- Allow uploading large files in chunks -- useful for flakey mobile connections may be added if time permits 
 
 
 ## Installation
-Modification of the .env file will be required to hook up prisma to your own internal development database
+Modification of the .env file will be required to hook up prisma to your own internal development database  
+You will need to add the following environment variables: <DATABASE_URL>, <JWT_SIMPLE_TOKEN>
 
 
 ## Developing

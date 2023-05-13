@@ -2,6 +2,8 @@ import { PrismaClient } from '@prisma/client';
 import { v4 as uuidv4 } from 'uuid';
 import { hashPassword, } from './signup';
 import { error } from 'console';
+import { JWT_SIMPLE_TOKEN } from '$env/static/private'
+import { Session } from 'inspector';
 /** @type {import('./%types').Actions} */
 
 export const actions = {
@@ -27,6 +29,10 @@ export const actions = {
 						}
 					});
 					console.log(user);
+					let jwt = require('jwt-simple')
+					let payload = email
+					let secret = JWT_SIMPLE_TOKEN
+					let token = jwt.encode(payload, secret)
 				}
 				main()
 					.then(async () => {
